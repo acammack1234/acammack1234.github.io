@@ -321,12 +321,12 @@ margin_of_error</code></pre>
 <p><strong>3. What is the symbol for the sample statistic?</strong></p>
 <p><span class="math inline">\(\hat{p}_{alx}-\hat{p}_{arl}\)</span></p>
 <p><strong>4. What are the null and alternative hypotheses in symbols and words?</strong></p>
-<p><span class="math inline">\(H_0:\pi_{alx}-\pi_{arl}=0\)</span> The population proportion of condos is the same in Alexandria and Arlington.<br />
-<span class="math inline">\(H_A:\pi_{alx}-\pi_{arl}\neq0\)</span> The population proportion of condos is different between Alexandria and Arlington.</p>
+<p><span class="math inline">\(H_0:\pi_{alx}-\pi_{arl}=0\)</span> The population proportion of townhouses is the same in Alexandria and Arlington.<br />
+<span class="math inline">\(H_A:\pi_{alx}-\pi_{arl}\neq0\)</span> The population proportion of townhouses is different between Alexandria and Arlington.</p>
 <p><strong>5. What is the appropriate theory-based test?</strong></p>
 <p><em>two-sample z-test</em></p>
 <p><strong>6. What are the validity conditions for this test? Are they met?</strong></p>
-<p><span class="math inline">\(\geq10\)</span> observations in each cell of the two-way table. Yes</p>
+<p><span class="math inline">\(\geq10\)</span> observations in each cell of the two-way table. No</p>
 <pre class="r"><code>df %&gt;%
   filter(city %in% c(&quot;Alexandria&quot;,&quot;Arlington&quot;)) %&gt;% 
   count(city, property_type) %&gt;%
